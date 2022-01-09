@@ -1,0 +1,48 @@
+<idea-plugin>
+  <!-- 这是插件的id，必须唯一，最好使用公司包名，采用com.xxx.xxx的形式-->
+  <id>com.xiaojin.li.hello.plugin.demo</id>
+  <!-- 插件的名称，会显示在插件管理页面 -->
+  <name>这是我的第一个plugin</name>
+  <!-- 插件的版本 -->
+  <version>1.0</version>
+  <!--  -->
+  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+  <!-- 插件的描述 -->
+  <description><![CDATA[
+      Enter short description for your plugin here.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+  <!-- 插件的更新说明 -->
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- 插件项目依赖的第三方库 -->
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.lang</depends>
+  <depends>com.intellij.modules.java</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <!-- 插件的菜单项 -->
+  <actions>
+    <!-- id为菜单的id，class为该菜单对应的类，text为该插件菜单对应的显示的文本，-->
+    <action id="files.PluginDemoActionABC" class="files.PluginDemoActionABC" text="PluginDemoActionABC" description="files.PluginDemoActionABC">
+      <!-- 将该插件添加到Tools菜单内，并且排在第一个 -->
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
+    </action>
+    <action id="files.AddMethodAction" class="files.files.AddMethodAction" text="AddMethodAction"
+            description="AddMethodAction">
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
+    </action>
+  </actions>
+</idea-plugin>
